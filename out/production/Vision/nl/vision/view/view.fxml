@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="view" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="685.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nl.vision.control.MainController">
+   <center>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0" BorderPane.alignment="TOP_LEFT">
+         <children>
+            <fx:include fx:id="dragDrop" source="dragdrop.fxml" />
+            <BarChart fx:id="chart" animated="false" barGap="0.0" categoryGap="0.0" prefHeight="276.0" prefWidth="500.0">
+              <xAxis>
+                <CategoryAxis fx:id="xAxis" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis fx:id="yAxis" />
+              </yAxis>
+               <HBox.margin>
+                  <Insets bottom="10.0" right="10.0" top="10.0" />
+               </HBox.margin>
+            </BarChart>
+         </children>
+      </HBox>
+   </center>
+   <bottom>
+      <HBox alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" BorderPane.alignment="CENTER">
+         <children>
+            <ChoiceBox fx:id="imageTypeChooser" prefWidth="150.0" />
+            <ChoiceBox fx:id="filterTypeChooser" prefWidth="150.0" />
+            <TextField fx:id="thresholdField" />
+         </children>
+      </HBox>
+   </bottom>
+   <top>
+      <fx:include fx:id="menu" source="menu.fxml" />
+   </top>
+</BorderPane>

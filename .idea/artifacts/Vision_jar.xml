@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Vision:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Vision_jar</output-path>
+    <root id="archive" name="Vision.jar">
+      <element id="module-output" name="Vision" />
+    </root>
+  </artifact>
+</component>
